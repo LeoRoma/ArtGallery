@@ -1,0 +1,16 @@
+.container{
+    border: orangered solid;
+}
+
+.landing-page-container{
+    border: orchid solid;
+}
+
+.sticky-dynamic-container{
+    border: greenyellow solid;
+}
+
+.banner-absolute{
+    border:green solid;
+    position: absolute;
+}
