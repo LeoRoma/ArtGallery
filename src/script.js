@@ -55,4 +55,5 @@ console.log(landingPageContainerHeight)
 
 document.addEventListener('scroll', () => {
     landingPageContainer.style.display = scrollTop.scrollTop >= landingPageContainerHeight ? 'none' : 'block';
+    console.log(scrollTop.scrollTop)
 })

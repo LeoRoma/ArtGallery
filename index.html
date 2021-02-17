@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./public/style/style.css">
     <link rel="stylesheet" type="text/css" href="./public/style/gallery.css">
     <link rel="stylesheet" type="text/css" href="./public/style/landingpage.css">
+    <link rel="stylesheet" type="text/css" href="./public/style/rightSidenav.css">
+    <link rel="stylesheet" type="text/css" href="./public/style/stickyDynamic.css">
     <title>Art Gallery</title>
 </head>
+
 <body>
     <div class="container">
+        <div class="right-sidenav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>
+
         <div class="fixed-container">
             <div class="landing-page-container">
-                <h1 style="color: aliceblue;">Landing page</h1>
+                <h1>Landing page</h1>
             </div>
-        </div>      
+        </div>
+
         <div class="skin-container">
             <div class="sticky-dynamic-container">
                 <div class="sticky-col">
-                    <h1 style="color: aliceblue;">Sticky</h1>
+                    <div class="card-image">
+                        <h1 style="color: aliceblue;">Sticky</h1>
+                    </div>
                 </div>
                 <div class="dynamic-col">
-                    <h1 style="color: aliceblue;">Dynamic</h1>
+                    <div class="cards-holder">
+                        <h1 style="color: aliceblue;">Dynamic</h1>
+                    </div>
                 </div>
             </div>
-       
+
             <div class="gallery-container">
                 <div class="second-header-container">
                     <h1 style="color: aliceblue;">Second header</h1>
@@ -35,7 +50,8 @@
         </div>
     </div>
 
-   
+
     <script src='./src/script.js'></script>
 </body>
+
 </html>
