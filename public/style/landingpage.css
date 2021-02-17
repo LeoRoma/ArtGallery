@@ -1,7 +1,44 @@
 
 .landing-page-container{
     position:fixed;
-    background-color: cyan;
     height: 100vh;
     width: 99%;
+  
+}
+
+.landing-page-wrapper{
+    position: relative;
+    top: 25%;
+    margin: auto;
+    display: flex;
+    border: black solid;
+}
+
+.header-wrapper{
+    /* position: relative; */
+    border: blue solid;
+    /* margin: auto; */
+    width:100%;
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text{
+    margin: 0;
+    display: block;
+    white-space: nowrap;
+    font-size: 400;
+    user-select: none;
+    font-size: 115px;
+    line-height: 1;
+}
+
+.image{
+    position: relative;
+    border: green solid;
+    margin: auto;
+    right: 15%;
 }

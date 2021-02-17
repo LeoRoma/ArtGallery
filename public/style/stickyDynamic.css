@@ -1,13 +1,14 @@
 .skin-container{
     position:relative;
     top: 100vh;
-
 }
 
 .sticky-dynamic-container{
+    position: relative;
     background-color: darkorange;
     display: flex;
     height: 200vh;
+    width:95%;
 }
 
 .sticky-col{
@@ -15,7 +16,7 @@
     top: 0;
     position: sticky;
     height: 100vh;
-    width: 565px;
+    width: 1070px;
     padding: 2%;
 }
 
@@ -25,8 +26,9 @@
 }
 
 .dynamic-col{
+    position: relative;
     background-color: darkred;
-    width: 55%;
+    width: 100%;
 }
 
 .cards-holder{
