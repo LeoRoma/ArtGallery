@@ -1,0 +1,7 @@
+
+.landing-page-container{
+    position:fixed;
+    background-color: cyan;
+    height: 100vh;
+    width: 99%;
+}

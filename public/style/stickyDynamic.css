@@ -1,0 +1,22 @@
+.skin-container{
+    position:relative;
+    top: 100vh;
+}
+
+.sticky-dynamic-container{
+    background-color: darkorange;
+    display: flex;
+    height: 100vh;
+}
+
+.sticky-col{
+    background-color: darkorchid;
+    top: 0;
+    position: sticky;
+    height: 600px;
+    width: 595px;
+}
+
+.dynamic-col{
+    background-color: darkred;
+}

@@ -1,0 +1,16 @@
+
+.second-header-container{
+    background-color: darkgray;
+    top: 0;
+    height: 40vh;
+    position: sticky;
+    z-index: -2;
+}
+
+.gallery-container{
+    /* background-color: darksalmon; */
+    color: transparent;
+    height: 200vh;
+    position: relative;
+    /* z-index: 999; */
+}
