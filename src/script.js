@@ -49,7 +49,7 @@
 
 const body = document.body;
 let scrollTop = document.documentElement;
-const landingPageContainer = document.querySelector('.landing-page-container');
+const landingPageContainer = document.querySelector('.start-screen');
 const landingPageContainerHeight = landingPageContainer.scrollHeight;
 console.log(landingPageContainerHeight)
 

@@ -1,44 +1,87 @@
-
-.landing-page-container{
+.start-screen{
     position:fixed;
     height: 100vh;
-    width: 99%;
-  
+    /* width: 95%; */
+    padding: 24px 0px ;
+    top:0;
+    right:0;
+    left:0;
+    box-sizing: border-box;
+    border: blue solid;
+}
+
+
+.landing-page-container{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 76px 0 24px;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 2560px;
+    border: red solid;
 }
 
 .landing-page-wrapper{
-    position: relative;
-    top: 25%;
-    margin: auto;
     display: flex;
-    border: black solid;
+    flex-grow: 1;
+    border:chartreuse solid;
 }
 
 .header-wrapper{
-    /* position: relative; */
-    border: blue solid;
-    /* margin: auto; */
-    width:100%;
-    flex-grow:1;
+    border: cornflowerblue solid;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 61.53%;
+    width: calc(100%/13 * 8);
+    padding-left: 7.69%;
+    padding-left: calc(100%/14);
+}
+
+.header-inner-wrapper{
+    padding-left: 50px;
+    width: 100%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .header-text{
-    margin: 0;
-    display: block;
     white-space: nowrap;
-    font-size: 400;
+    font-weight: 400;
     user-select: none;
-    font-size: 115px;
-    line-height: 1;
+    font-size: calc(48px + (120 - 48) * (100vw - 240px)/(1920 - 240));
+    line-height: 1.1;
 }
 
-.image{
-    position: relative;
-    border: green solid;
-    margin: auto;
-    right: 15%;
+.header-image-wrapper{
+    overflow: hidden;
+    position: absolute;
+    left: 39%;
+    width: 35%;
+    height: calc(100vh - 28px);
+    display: flex;
+    align-items: center;
+    /* padding-top: 30px; */
+    border: magenta solid;
+    /* width: 50%; */
+    /* width: calc(100%/10 * 5); */
 }
+
+.header-image{
+    /* position: absolute; */
+    width: 100%;
+    height: calc(100vh - 28px);
+    object-fit: contain;
+    object-position: 0% 50%;
+}
+
