@@ -68,7 +68,7 @@
     position: absolute;
     left: 39%;
     width: 35%;
-    height: calc(100vh - 28px);
+    height: calc(100vh - 48px);
     display: flex;
     align-items: center;
     /* padding-top: 30px; */
@@ -80,7 +80,7 @@
 .header-image{
     /* position: absolute; */
     width: 100%;
-    height: calc(100vh - 28px);
+    height: calc(100vh - 48px);
     object-fit: contain;
     object-position: 0% 50%;
 }
