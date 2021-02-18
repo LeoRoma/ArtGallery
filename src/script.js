@@ -52,12 +52,14 @@ let scrollTop = document.documentElement;
 const landingPageContainer = document.querySelector('.start-screen');
 let landingPageContainerHeight = landingPageContainer.scrollHeight;
 const rightSidenavHeader = document.querySelector('.right-sidenav-header');
+let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
+console.log(rightSidenavHeaderWidth);
 const drawer = document.querySelector('.drawer');
 
 
 
 document.addEventListener('scroll', () => {
-    rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? '-170px' : '0px';
+    rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
     drawer.style.display = scrollTop.scrollTop >= 1 ? 'block' : 'none';
     landingPageContainer.style.display = scrollTop.scrollTop >= landingPageContainerHeight ? 'none' : 'block';
     console.log(typeof scrollTop.scrollTop)
