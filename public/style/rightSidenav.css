@@ -9,6 +9,8 @@
     flex-direction: column;
     right: 0;
     top:0;
+    transition: 1s;
+    border: palevioletred solid;
 }
   
   .right-sidenav-header a {
@@ -19,7 +21,8 @@
     display: block;
   }
 
-  .right-sidenav {
+
+.right-sidenav {
     position: fixed;
     right: 0;
     top: 0;
@@ -31,4 +34,16 @@
     overflow-x: hidden;
     padding-top: 20px;
     border: black solid;
+    display: flex;
+    flex-direction: column;
 } 
+
+.drawer{
+    margin: auto;
+    position: relative;
+    right: 0;
+    text-align: right;
+    border:black solid;
+    display: none;
+   
+}

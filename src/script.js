@@ -50,12 +50,15 @@
 const body = document.body;
 let scrollTop = document.documentElement;
 const landingPageContainer = document.querySelector('.start-screen');
-const rightSidenavHeader = document.querySelector('.right-sidenav-header')
-const landingPageContainerHeight = landingPageContainer.scrollHeight;
+let landingPageContainerHeight = landingPageContainer.scrollHeight;
+const rightSidenavHeader = document.querySelector('.right-sidenav-header');
+const drawer = document.querySelector('.drawer');
+
 
 
 document.addEventListener('scroll', () => {
     rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? '-170px' : '0px';
+    drawer.style.display = scrollTop.scrollTop >= 1 ? 'block' : 'none';
     landingPageContainer.style.display = scrollTop.scrollTop >= landingPageContainerHeight ? 'none' : 'block';
     console.log(typeof scrollTop.scrollTop)
 })
