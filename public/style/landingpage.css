@@ -27,6 +27,7 @@ html{
 }
 
 .landing-page-wrapper{
+    position: relative;
     display: flex;
     flex-grow: 1;
     border:chartreuse solid;
@@ -49,6 +50,7 @@ html{
 }
 
 .header-inner-wrapper{
+    border: black solid;
     padding-left: 50px;
     width: 100%;
     flex-grow: 1;
@@ -70,8 +72,8 @@ html{
 .header-image-wrapper{
     overflow: hidden;
     position: absolute;
-    left: 39%;
-    width: 35%;
+    left: 50%;
+    width: 45%;
     height: calc(100vh - 48px);
     display: flex;
     align-items: center;
@@ -81,7 +83,6 @@ html{
 }
 
 .header-image{
-  
     width: 100%;
     height: calc(100vh - 48px);
     object-fit: contain;
@@ -111,3 +112,85 @@ html{
     color: #818181;
     display: block;
   }
+
+
+@media only screen and (max-width: 1022px){
+    .landing-page-wrapper{
+        flex-direction: column-reverse;
+    }
+
+    .header-wrapper{
+        height: auto;
+        width: 100%;
+        margin-bottom: 110px;
+        padding-left: 0;
+    }
+
+    
+    .header-text{
+        align-self: flex-start;
+        
+    }
+
+    .header-image-wrapper{
+        top: 0;
+        left: 25%;
+        /* left: auto; */
+        width: 35%;
+        width: calc(100%/5 * 4);
+        height: calc(50% + 96px);
+        margin-top: 96px;
+    }
+
+    .header-image{
+        height: 100%;
+        object-position: 50% 50%;
+    }
+
+    .right-sidenav-header{
+        width: calc(100%/8 * 2);
+        justify-content: flex-start;
+        margin-top: 96px;
+    }
+}
+
+@media (max-width: 767px){
+    .start-screen{
+        padding: 8px 0;
+    }
+
+    .landing-page-container{
+        padding: 0 8px;
+    }
+
+    .landing-page-wrapper{
+        width: 100%;
+    }
+
+    .header-wrapper{
+        height: auto;
+        width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .header-inner-wrapper{
+        padding-left: 0px;
+    }
+
+    .header-image-wrapper{
+        top: -90px;
+        right: 0%;
+        width: calc(100%/4 * 3);
+        height: 60%;
+    }
+
+    .header-image{
+        right: 20px;
+        height: 100%;
+        object-position: 100% 0%;
+    }
+
+    .right-sidenav-header{
+        display: none;
+    }
+}

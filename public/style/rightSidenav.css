@@ -26,3 +26,11 @@
     transition: 1s;
    
 }
+
+
+@media (max-width: 767px){
+    .right-sidenav{
+        display: none;
+    }
+   
+}
