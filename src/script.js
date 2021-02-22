@@ -1,7 +1,7 @@
 const body = document.body;
 let scrollTop = document.documentElement;
 const landingPageContainer = document.querySelector('.start-screen');
-let landingPageContainerHeight = landingPageContainer.scrollHeight;
+let landingPageContainerHeight = landingPageContainer.offsetHeight;
 const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
 console.log(rightSidenavHeaderWidth);
@@ -26,3 +26,5 @@ drawerButton.addEventListener('click', () => {
     rightSideNavInner.classList.toggle('open');
     drawerButton.classList.toggle('change');
 })
+
+

@@ -154,7 +154,7 @@ html{
     }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 697px){
     .start-screen{
         padding: 8px 0;
     }
