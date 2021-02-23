@@ -7,17 +7,18 @@
 .sticky-dynamic-container{
     border: violet solid;
     position: relative;
-    padding: 0 76px 0 24px;
+    padding: 24px 64px 0 24px;
     margin: 0 auto;
     display: flex;
     height: 100%;
     width:100%;
     max-width: 2560px;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .article-list-container{
-    margin-top: 24px;
+    /* margin-top: 24px; */
     display: flex;
     width: 100%;
 }
@@ -51,12 +52,55 @@
     /* height: 200vh; */
 }
 
-.cards-holder{
-    padding: 2%;
-}
 
 .block-side-title{
-    border: royalblue solid;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.side-title-header{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.side-title{
+    font-size: calc(80px + (80 - 72) * (100vw - 1440px)/(1920 - 1440));
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    user-select: none;
+    text-align: center;
+}
+
+.article-container{
+    display: flex;
+    padding: 0px 0px 20px 20px;
+    border:blue solid;
+    height: 150px;
+}
+
+.article-image-container{
+    border: red solid;
+    width: 50%;
+    height: 100%;
+}
+
+.article-image-container img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-body-container{
+    border: blueviolet solid;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
 }
 
 @media (min-width: 1440px) and (max-width: 1919px){

@@ -18,10 +18,10 @@ window.addEventListener('scroll', () => {
     rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
     drawerButton.style.right = scrollTop.scrollTop >= 1 ? '-15px' : `-150px`;
     // landingPageContainer.style.display = scrollTop.scrollTop >= landingPageContainerHeight ? 'none' : 'block';
-    let currentScroll = window.pageYOffset || scrollTop.scrollTop ||
-        body.scrollTop || 0;
+    // let currentScroll = window.pageYOffset || scrollTop.scrollTop ||
+    //     body.scrollTop || 0;
 
-    landingPageContainer.style.opacity = -currentScroll / (landingPageContainerHeight / 2) + 2
+    landingPageContainer.style.opacity = -scrollTop.scrollTop / (landingPageContainerHeight) + 1
 })
 
 
