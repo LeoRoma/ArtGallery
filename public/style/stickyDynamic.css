@@ -24,7 +24,9 @@
 }
 
 .sticky-col{
-
+    width: 56.14%;
+    width: calc(100%/14 * 14);
+    /* max-width: 1330px; */
 }
 
 .card-image{
@@ -79,12 +81,12 @@
     display: flex;
     padding: 0px 0px 20px 20px;
     border:blue solid;
-    height: 150px;
+    height: 220px;
 }
 
 .article-image-container{
     border: red solid;
-    width: 50%;
+    width: 80%;
     height: 100%;
 }
 
@@ -105,8 +107,6 @@
 
 @media (min-width: 1440px) and (max-width: 1919px){
 .sticky-col {
-    width: 57.14%;
-    width: calc(100%/14 * 8);
-    max-width: 664px;
+ 
 }
 }
