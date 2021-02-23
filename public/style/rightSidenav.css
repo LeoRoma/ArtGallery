@@ -77,7 +77,7 @@
 }
 
 .circle{
-    clip-path: circle(120%);
+    clip-path: circle(90% at -300% 50%);
 }
 
 @media (max-width: 697px){
