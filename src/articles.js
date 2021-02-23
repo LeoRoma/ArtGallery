@@ -36,7 +36,7 @@ fetch('https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=s3sidQNE043xh
                 </div>
                 <div class="article-body-container">
                     <div class="article-title">
-                        ${art.title}
+                        <h1>${art.title}</h1>
                     </div>
                     <div class="article-date">
                         ${formatDate(art.created_date)}

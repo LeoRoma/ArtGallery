@@ -7,7 +7,7 @@
 .sticky-dynamic-container{
     border: violet solid;
     position: relative;
-    padding: 24px 64px 0 24px;
+    padding: 24px 64px 24px 24px;
     margin: 0 auto;
     display: flex;
     height: 100%;
@@ -75,34 +75,45 @@
     text-orientation: mixed;
     user-select: none;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .article-container{
     display: flex;
-    padding: 0px 0px 20px 20px;
+    padding: 0px 0px 0px 20px;
     border:blue solid;
     height: 220px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
 }
 
 .article-image-container{
     border: red solid;
     width: 80%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .article-image-container img{
     margin: auto;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .article-body-container{
-    border: blueviolet solid;
+    position: relative;
+    border: yellow solid;
+    padding: 20px;
     margin: auto;
     width: 100%;
-    text-align: center;
-    align-items: center;
+    height: 100%;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+
+.article-container:last-child{
+    margin-bottom: 0px;
 }
 
 @media (min-width: 1440px) and (max-width: 1919px){
