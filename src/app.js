@@ -1,5 +1,5 @@
-const arts = []
-const copiedArts = [...arts];
+let paintings = []
+
 
 fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
 	method: 'GET',
@@ -15,8 +15,7 @@ fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
 			}
 			response.json()
 				.then(function (response) {
-					console.log(response);
-					arts.push(response.data);
+					console.log(response.data[0].images.web.url);
 					getArts(response.data)
 				})
 		}
@@ -27,9 +26,26 @@ fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
 
 
 function getArts(arts){
-	console.log(arts[0])
 	let filteredArts = arts.filter((art) => {
-		return art.collection.includes('Painting');
+		return art.collection.includes('Painting') && art.collection.includes('Euro');
 	})
-	console.log(filteredArts)
+	displayPaintings(filteredArts);
 }
+
+function displayPaintings(paintings){
+	const cardsHolder = document.querySelector('.cards-holder');
+	if(paintings){
+		const htmlString = paintings.map((painting) => {
+			// console.log(painting.images.print)
+			return `
+				<div>${painting.creditline}</div>
+	
+			`
+		}).join(' ');
+		console.log(cardsHolder)
+		cardsHolder.innerHTML = htmlString;
+	}
+	
+}
+
+{/* <img src="${painting.images.web.url}" alt="painting"></img> */}

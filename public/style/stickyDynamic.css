@@ -48,7 +48,7 @@
     position: relative;
     width: 100%;
     border: purple solid;
-    height: 200vh;
+    /* height: 200vh; */
 }
 
 .cards-holder{
