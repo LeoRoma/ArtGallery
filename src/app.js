@@ -35,10 +35,11 @@ function getArts(arts){
 function displayPaintings(paintings){
 	const cardsHolder = document.querySelector('.cards-holder');
 	if(paintings){
-		const htmlString = paintings.map((painting) => {
-			// console.log(painting.images.print)
-			return `
-				<div>${painting.creditline}</div>
+		const htmlString = paintings.slice(20, 33).map((painting, index) => {
+			console.log(painting, index)
+			return `		
+			<img src="${painting.images.web.url}" alt="painting"></img>
+				<div>${painting.title}</div>
 	
 			`
 		}).join(' ');
@@ -47,5 +48,4 @@ function displayPaintings(paintings){
 	}
 	
 }
-
-{/* <img src="${painting.images.web.url}" alt="painting"></img> */}
+	// 		
