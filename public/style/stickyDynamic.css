@@ -122,14 +122,14 @@
 }
 } */
 
+.prova{
+    width: 200px;
+    height: 200px;
+    border: teal solid;
+}
 
-@media only screen and (max-width: 1439){
+@media only screen and (max-width: 1439px){
     .block-side-title{
         display: none;
-        background-color: violet;
-    }
-
-    .article-body-container{
-        background-color: yellow;
     }
 }
