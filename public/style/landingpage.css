@@ -114,7 +114,7 @@ html{
   }
 
 
-@media  (min-width: 76px) and (max-width: 1022px){
+@media  (min-width: 768px) and (max-width: 1022px){
     .landing-page-wrapper{
         flex-direction: column-reverse;
     }
@@ -154,7 +154,7 @@ html{
     }
 }
 
-@media only screen and (max-width: 697px){
+@media only screen and (max-width: 767px){
     .start-screen{
         padding: 8px 0;
     }
@@ -164,28 +164,29 @@ html{
     }
 
     .landing-page-wrapper{
-        width: 100%;
+        flex-direction: column-reverse;
     }
 
     .header-wrapper{
         height: auto;
         width: 100%;
-        margin-bottom: 14px;
+        margin-bottom: 64px;
     }
 
     .header-inner-wrapper{
-        padding-left: 50px;
+        padding-left: 0px;
+        justify-content: flex-start;
     }
 
     .header-image-wrapper{
-        top: -90px;
-        right: 0%;
+        top: 0;
+        left:25%;
         width: calc(100%/4 * 3);
         height: 60%;
+        box-sizing: border-box;
     }
 
     .header-image{
-        right: 20px;
         height: 100%;
         object-position: 100% 0%;
     }

@@ -116,8 +116,20 @@
     margin-bottom: 0px;
 }
 
-@media (min-width: 1440px) and (max-width: 1919px){
+/* @media (min-width: 1440px) and (max-width: 1919px){
 .sticky-col {
  
 }
+} */
+
+
+@media only screen and (max-width: 1439){
+    .block-side-title{
+        display: none;
+        background-color: violet;
+    }
+
+    .article-body-container{
+        background-color: yellow;
+    }
 }
