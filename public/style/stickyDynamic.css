@@ -28,7 +28,7 @@
 
 }
 
-.article-image{
+.poster-image{
     overflow: hidden;
     top: 24px;
     position: sticky;
@@ -37,13 +37,46 @@
     /* max-width: 576px; */
 }
 
-.article-image img{
+.poster-image img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
     box-sizing: border-box;
+}
+
+.poster-image-body-container{
+    color: bisque; 
+    position: absolute; 
+    margin: auto; 
+    width: 100%;
+    height: 30%;
+    box-sizing: border-box;
+    border: fuchsia solid;
+    bottom: 0;
+    padding: 48px 48px 250px 48px;
+}
+
+.poster-image-body-wrapper{
+    border: blue solid;
+}
+
+.poster-image-title{
+    white-space: nowrap; 
+    width: 200px; 
+    overflow: hidden;
+    border: black solid;
+    text-overflow: ellipsis;
+}
+
+.poster-image-title h1{
+    /* text-overflow: ellipsis; */
+    font-size: calc(32px + (56 - 32) * (100vw - 240px)/(1920 - 240));
+}
+
+.poster-image-date p{
+    font-size: 18px;
 }
 
 .dynamic-col{

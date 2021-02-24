@@ -8,6 +8,7 @@ fetch('https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=s3sidQNE043xh
       response.json()
         .then(function(data) {
             getArts(data.results);
+            getArt(data.results[0]);
         //   items.push(data.results);
         })
     }
@@ -50,10 +51,39 @@ fetch('https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=s3sidQNE043xh
       articlesHolder.innerHTML = htmlString;
   }
 
+
+  function getArt(art){
+    const formattedDate = formatDate(art.created_date);
+    const title = art.title;
+    const section = art.section;
+    const image = art.multimedia[0].url;
+    populatePosterImage(formattedDate, title, section, image);
+  }
+
+  function populatePosterImage(formattedDate, title, section, image){
+    const htmlPosterImage = `    
+      <img src="${image}" alt="latest-news">
+
+      <div class="poster-image-body-container">
+          <div class="poster-image-body-wrapper">
+             
+              <div class="poster-image-title">
+                  <h1>${title}</h1>
+              </div>
+              <div class="poster-image-date">
+                  <p>${formattedDate}</p>
+              </div>
+          </div>
+      </div>
+    `
+    const posterImage = document.querySelector('.poster-image');
+    posterImage.innerHTML = htmlPosterImage;
+  }
+
   function formatDate(date){
-      let year = date.slice(0,4);
-      let month = date.slice(5,7);
-      let day = date.slice(8, 10);
-      let formattedDate = `${day}/${month}/${year}`;
-      return formattedDate
+    let year = date.slice(0,4);
+    let month = date.slice(5,7);
+    let day = date.slice(8, 10);
+    let formattedDate = `${day}/${month}/${year}`;
+    return formattedDate
   }
