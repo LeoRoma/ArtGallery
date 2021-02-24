@@ -5,7 +5,7 @@
     height: 100%;
     width: 70px;
     z-index: 1;
-    /* background-color: #111; */
+    background-color: transparent;
     overflow-x: hidden;
     padding-top: 20px;
     border: black solid;
@@ -13,9 +13,18 @@
     flex-direction: column;
     display: block;
     box-sizing: border-box;
-    clip-path: circle(7%);
-    transition: clip-path 1s;
+
 } 
+
+.right-sidenav-wrapper{
+    border:violet solid;
+    position: fixed;
+    clip-path: circle(5%);
+    transition: clip-path 0.5s;
+    background-color: white;
+    height: 100vh;
+    box-sizing: border-box;
+}
 
 .right-sidenav-inner{
     position: fixed;
@@ -25,8 +34,8 @@
     width: 0;
     display: flex;
     flex-direction: column;
-    transition: 1s;
-    background-color: black;
+    transition: 0.5s;
+    background-color: white;
     text-align: center;
 
 }
@@ -34,18 +43,16 @@
 .right-sidenav-inner a{
     position: relative;
     top: 40%;
-    /* text-align: center; */
-    /* vertical-align: center; */
 }
 
 .drawer-button{
     margin: auto;
-    position: relative;
+    position: fixed;
     text-align: right;
     border:black solid;
-    top: 45%;
+    top: 50%;
     right: -70px;
-    /* transition: 1s; */
+    transition: 1s;
     display: inline-block;
     cursor: pointer;
 }
@@ -59,7 +66,6 @@
 }
 
 .change .bar1 {
-    /* -webkit-transform: rotate(-45deg) translate(-9px, 6px) ; */
     transform: rotate(-45deg) translate(-9px, 6px);
     background-color: white;
 }
@@ -67,7 +73,6 @@
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
-    /* -webkit-transform: rotate(45deg) translate(-8px, -8px) ; */
     transform: rotate(45deg) translate(-8px, -8px) ;
     background-color: white;
 }
@@ -77,8 +82,9 @@
 }
 
 .circle{
-    clip-path: circle(90% at -300% 50%);
+    clip-path: circle(90%);
 }
+
 
 @media (max-width: 697px){
     .right-sidenav-container{
