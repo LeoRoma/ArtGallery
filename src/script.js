@@ -8,6 +8,7 @@ console.log(rightSidenavHeaderWidth);
 const drawerButton = document.querySelector('.drawer-button');
 const rightSideNavInner = document.querySelector('.right-sidenav-inner');
 const rightSidenavWrapper = document.querySelector('.right-sidenav-wrapper');
+const sidenavImageContainer = document.querySelector('.sidenav-image-container');
 
 window.addEventListener('scroll', () => {
     rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
@@ -17,10 +18,11 @@ window.addEventListener('scroll', () => {
 
 
 drawerButton.addEventListener('click', () => {
-    rightSideNavInner.classList.toggle('open');
-    
+    rightSideNavInner.classList.toggle('open-menu');
+    sidenavImageContainer.classList.toggle('open-image')
     drawerButton.classList.toggle('change');
     rightSidenavWrapper.classList.toggle('circle'); 
+    sidenavImageContainer.classList.toggle('circle')
 })
 
 

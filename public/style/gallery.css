@@ -4,7 +4,7 @@
     top: 0;
     height: 40vh;
     position: sticky;
-    z-index: -2;
+    z-index: 2;
 }
 
 .gallery-container{
@@ -12,5 +12,5 @@
     color: transparent;
     height: 200vh;
     position: relative;
-    /* z-index: 999; */
+    z-index: 999;
 }

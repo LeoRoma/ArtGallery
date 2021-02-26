@@ -2,6 +2,7 @@
     position:relative;
     top: 100vh;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .sticky-dynamic-container{
@@ -274,6 +275,10 @@
 
     .poster-image img{
         object-fit: contain;
+    }
+
+    .poster-image-title{
+        font-size: calc(40px + (80 - 72) * (100vw - 1440px)/(1920 - 1440));
     }
 
     .article-list-container{
