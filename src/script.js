@@ -4,7 +4,7 @@ const landingPageContainer = document.querySelector('.start-screen');
 let landingPageContainerHeight = landingPageContainer.offsetHeight;
 const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
-console.log(rightSidenavHeaderWidth);
+
 const drawerButton = document.querySelector('.drawer-button');
 const rightSideNavInner = document.querySelector('.right-sidenav-inner');
 const rightSidenavWrapper = document.querySelector('.right-sidenav-wrapper');
