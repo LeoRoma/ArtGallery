@@ -86,9 +86,17 @@ function displayPaintings() {
 	const htmlPaintings = Object.keys(paintingsFromEurope).map(function(key, index){
 		console.log(paintingsFromEurope[key].images.web.url)
 		return `
-		<img src="${paintingsFromEurope[key].images.web.url}" alt="painting"></img> 
-			<div>${paintingsFromEurope[key].title}</div>
-			<div>${paintingsFromEurope[key].culture}</div>
+			<div class="painting-container">
+				<div class="painting-image-container">
+					<img src="${paintingsFromEurope[key].images.web.url}" alt="painting"></img> 
+				</div>
+				<div>
+					${paintingsFromEurope[key].title}
+				</div>
+				<div>
+					${paintingsFromEurope[key].culture}
+				</div>
+			</div>
 		
 		`
 	}).join(" ");
