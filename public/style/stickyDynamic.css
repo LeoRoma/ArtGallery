@@ -6,7 +6,6 @@
 }
 
 .sticky-dynamic-container{
-    border: violet solid;
     position: relative;
     padding: 24px 64px 24px 24px;
     margin: 0 auto;
@@ -21,7 +20,6 @@
 .article-list-container{
     display: flex;
     width: 100%;
-    border: turquoise solid;
 }
 
 .sticky-col{
@@ -38,7 +36,7 @@
     position: sticky;
     width: 100%;
     height: calc(100vh - 48px);
-    min-width: 230px;
+    box-sizing: border-box;
 }
 
 .poster-image img{
@@ -56,14 +54,16 @@
     width: 100%;
     height: 30%;
     box-sizing: border-box;
-    border: fuchsia solid;
     bottom: 0;
     padding: 48px 48px 250px 48px;
 }
 
 .poster-image-body-wrapper{
-    color: white;
-    border: blue solid;
+    padding-right: 48px;
+    margin: auto;
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 .poster-image-title{
@@ -84,14 +84,22 @@
 }
 
 .poster-image-title h1{
+    vertical-align: top;
     font-size: calc(32px + (56 - 32) * (100vw - 240px)/(1920 - 240));
+}
+
+.poster-fontcolor{
+    text-shadow: 3px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
 }
 
 .poster-image-date{
     position: relative;
+    bottom: 0;
     font-size: 18px;
+    /* height: 100px; */
     box-sizing: border-box;
-    border: brown solid;
+    margin: auto;
 }
 
 /* Articles */
@@ -102,7 +110,7 @@
 }
 
 .articles-holder{
-    border:deepskyblue solid;
+    
 }
 
 .article-container{
@@ -111,7 +119,6 @@
     height: 25vh;
     margin-bottom: 24px;
     box-sizing: border-box;
-    border: deeppink solid;
 }
 
 .article-image-container{
@@ -135,19 +142,16 @@
     height: 100%;
     margin-bottom: 0px;
     box-sizing: border-box;
-    border: dimgray solid;
 }
 
 .article-body-wrapper{
     position: absolute;
     bottom: 0;
-    border: blueviolet solid;
 }
 
 .article-title{
     position: relative;
     margin: auto;
-    border: violet solid;
     width: 100%;
     height: 80px;
     overflow: hidden;
@@ -157,11 +161,20 @@
 }
 
 .article-title h1{
+    color: black;
+    text-decoration: none;
     font-size: calc(20px + (24 - 20) * (100vw - 240px)/(1920 - 240));;
 }
 
+.article-title h1:hover{
+    color: grey;
+}
+
+a{
+    text-decoration: none;
+}
+
 .article-date{
-    border: blue solid;
 }
 
 .article-container:last-child{
@@ -238,6 +251,10 @@
         padding: 24px 54px 24px 24px;
     }
 
+    .poster-fontcolor{
+        color: black;
+        text-shadow: none;
+    }
     .article-list-container{
         flex-direction: column;
         margin-right: 0;
@@ -300,6 +317,10 @@
 
     .poster-image-title h1{
         font-size: calc(36px + (80 - 72) * (100vw - 1440px)/(1920 - 1440));
+    }
+
+    .poster-image-date{
+        height: 70px;
     }
 
     .article-body-wrapper{

@@ -32,12 +32,13 @@ function displayArts(arts) {
     return `
             <div class="article-container">
                 <div class="article-image-container">
-                    <img src="${art.multimedia[0].url}" alt="art" />
+                    <a href="${art.url}"><img src="${art.multimedia[0].url}" alt="art" /></a>
                 </div>
                 <div class="article-body-container">
                   <div class="article-body-wrapper">
+                      ${art.byline}
                     <div class="article-title two-lines">
-                        <h1>${art.title}</h1>
+                      <a href="${art.url}"><h1>${art.title}</h1></a>
                     </div>
                     <div class="article-date">
                         ${formatDate(art.created_date)}
@@ -56,22 +57,25 @@ function displayArts(arts) {
 function getArt(art) {
   const formattedDate = formatDate(art.created_date);
   const title = art.title;
-  const section = art.section;
   const image = art.multimedia[0].url;
-  populatePosterImage(formattedDate, title, section, image);
+  const byline = art.byline;
+  const url = art.url
+  populatePosterImage(formattedDate, title, byline, image, url);
 }
 
-function populatePosterImage(formattedDate, title, section, image) {
+function populatePosterImage(formattedDate, title, byline, image, url) {
   const htmlPosterImage = `    
-      <img src="${image}" alt="latest-news">
+      <a href="${url}"><img src="${image}" alt="latest-news"></a>
 
       <div class="poster-image-body-container">
           <div class="poster-image-body-wrapper">
+    
               <div class="poster-image-title two-lines">
-                  <h1>${title}</h1>
+           
+                  <a href="${url}"><h1 class="poster-fontcolor">${title}</h1></a>
               </div>
-              <div class="poster-image-date">
-                  ${formattedDate}
+              <div class="poster-image-date poster-fontcolor">
+                  ${formattedDate} -  ${byline}
               </div>
           </div>
       </div>
@@ -81,10 +85,10 @@ function populatePosterImage(formattedDate, title, section, image) {
 }
 
 function formatDate(date) {
-  const monthNames = {'01': "January", '02': "February", '03': "March", '04': "April", '05': "May", '06': "June",  '07':"July", '08': "August", '09': "September", '10': "October", '11': "November", '12': "December"};
+  const monthNames = { '01': "January", '02': "February", '03': "March", '04': "April", '05': "May", '06': "June", '07': "July", '08': "August", '09': "September", '10': "October", '11': "November", '12': "December" };
 
-  let year = date.slice(0,4);
-  let month = monthNames[date.slice(5,7)];
+  let year = date.slice(0, 4);
+  let month = monthNames[date.slice(5, 7)];
   let day = date.slice(8, 10);
 
   const formattedDate = `${day} ${month} ${year}`;
