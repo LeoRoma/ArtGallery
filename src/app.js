@@ -13,6 +13,7 @@ fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
 	headers: {
 		'Content-Type': 'application/json',
 	},
+	'Access-Control-Allow-Origin': '*',
 	origin: "https://leoartgallery.netlify.app"
 })
 	.then(
