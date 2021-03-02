@@ -14,9 +14,6 @@ function displayPaintings() {
 					<div class="painting-title">
 						${painting.title}
 					</div>
-					<div class="painting-title">
-						${painting.culture}
-					</div>
 				</div>
 			
 			</div>
@@ -26,3 +23,39 @@ function displayPaintings() {
 	galleryListContainer.innerHTML = htmlPaintings;
 }
 displayPaintings()
+
+
+fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
+	method: 'GET',
+	headers: {
+		'Content-Type': 'application/json',
+		'Access-Control-Allow-Origin': 'https://leoartgallery.netlify.app'
+	},
+})
+	.then(
+		function (response) {
+			if (response.status !== 200) {
+				console.log(`Looks like there was some problem. Status Code: ${response.status}`);
+				return;
+			}
+			response.json()
+				.then(function (response) {
+					getPaintings(response.data)
+				})
+		}
+	)
+	.catch(function (error) {
+		console.log(`Fetch Error :-S ${error}`);
+	})
+
+
+
+
+function getPaintings(arts) {
+	let filteredArts = arts.filter(filterPaintingsByEuro);
+	console.log(filteredArts)
+}
+
+function filterPaintingsByEuro(art){
+	return art.collection.includes('Painting') && art.collection.includes('Euro') && art.tombstone.includes('Vincent');
+}
