@@ -13,7 +13,7 @@ fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
 	headers: {
 		'Content-Type': 'application/json',
 	},
-	mode: "cors"
+	"Access-Control-Allow-Origin": "*"
 })
 	.then(
 		function (response) {
