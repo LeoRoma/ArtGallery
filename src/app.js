@@ -1,85 +1,12 @@
 const paintingsFromEurope = {
-	Austria: "",
-	England: "",
-	France: "",
-	Germany: "",
-	Italy: "",
-	Netherlands: "",
-	Switzerland: ""
+	Austria: {artist: "Ferdinand Georg Waldmüller (Austrian, 1793-1865)", culture: "Austria, 19th century", image: "https://openaccess-cdn.clevelandart.org/1988.57/1988.57_web.jpg", title: "Countess Szécheny"},
+	England: {artist: "Henry Bone (British, 1755-1834), after Titian (Italian, c. 1488-1576)", culture: "England, 19th century", image: "https://openaccess-cdn.clevelandart.org/2013.51/2013.51_web.jpg", title: "Bacchus and Ariadne"},
+	France: {artist: "Henri Rousseau (French, 1844-1910)", culture: "France, late 19th Century-early 20th Century", image: "https://openaccess-cdn.clevelandart.org/1929.951/1929.951_web.jpg", title: "Outskirts of Paris"},
+	Germany: {artist: "Franz Ludwig Catel (German, 1778-1856)", culture: "Germany, 19th century", image: "https://openaccess-cdn.clevelandart.org/1994.198/1994.198_web.jpg", title: "A View of Naples through a Window"},
+	Italy: {artist: "Giovanni Segantini (Italian, 1858-1899)", culture: "Italy, 19th century", image: "https://openaccess-cdn.clevelandart.org/1982.124/1982.124_web.jpg", title: "Pine Tree"},
+	Netherlands: {artist: "Two Poplars in the Alpilles near Saint-Rémy", culture: "Netherlands, 19th century", image: "https://openaccess-cdn.clevelandart.org/1958.32/1958.32_web.jpg", title: "Two Poplars in the Alpilles near Saint-Rémy"},
+	Switzerland: {artist: "Arnold Böcklin (Swiss, 1827-1901)", culture: "Switzerland, 19th century", image: "https://openaccess-cdn.clevelandart.org/1979.57/1979.57_web.jpg", title: "Ruin by the Sea"}
 } 
-
-fetch("https://openaccess-api.clevelandart.org/api/artworks/", {
-	method: 'GET',
-	headers: {
-		'Content-Type': 'application/json',
-		'Access-Control-Allow-Origin': 'https://leoartgallery.netlify.app'
-	},
-	mode: 'no-cors'
-})
-	.then(
-		function (response) {
-			if (response.status !== 200) {
-				console.log(`Looks like there was some problem. Status Code: ${response.status}`);
-				return;
-			}
-			response.json()
-				.then(function (response) {
-					getPaintings(response.data)
-				})
-		}
-	)
-	.catch(function (error) {
-		console.log(`Fetch Error :-S ${error}`);
-	})
-
-
-
-
-function getPaintings(arts) {
-	let filteredArts = arts.filter(filterPaintingsByEuro);
-	getEachCountryPainting(filteredArts)
-}
-
-function filterPaintingsByEuro(art){
-	return art.collection.includes('Painting') && art.collection.includes('Euro');
-}
-
-function getEachCountryPainting(filteredArts){
-	const filteredPaintings = [...filteredArts];
-	for(let i = 0; i < filteredPaintings.length; i++){
-		const painting = filteredPaintings[i];
-		const culture = painting.culture[0].split(',')
-		const country = culture[0]
-		if(painting.images !== null){
-			if(country === "Austria"){
-				paintingsFromEurope.Austria = painting
-			}
-			if(country === "England"){
-				paintingsFromEurope.England = painting;
-			}
-			if(country === "France"){
-				paintingsFromEurope.France = painting;
-			}
-			if(country === "Germany"){
-				paintingsFromEurope.Germany = painting
-			}
-			if(country === "Italy"){
-				paintingsFromEurope.Italy = painting;
-			}
-			if(country === "Netherlands"){
-				paintingsFromEurope.Netherlands = painting;
-			}
-			// if(country === "Sweden"){
-			// 	paintingsFromEurope.Sweden = painting
-			// }
-			if(country === "Switzerland"){
-				paintingsFromEurope.Switzerland = painting
-			}
-		}
-	
-	}
-	displayPaintings()
-}
 
 function displayPaintings() {
 	const galleryListContainer = document.querySelector('.gallery-list-container');
@@ -88,7 +15,10 @@ function displayPaintings() {
 		return `
 			<div class="painting-container">
 				<div class="painting-image-container">
-					<img src="${painting.images.web.url}" alt="painting"></img> 
+					<img src="${painting.image}" alt="painting"></img> 
+					<div class="painting-title">
+						${painting.artist}
+					</div>
 					<div class="painting-title">
 						${painting.title}
 					</div>
@@ -103,3 +33,5 @@ function displayPaintings() {
 	}).join(" ");
 	galleryListContainer.innerHTML = htmlPaintings;
 }
+
+displayPaintings()
