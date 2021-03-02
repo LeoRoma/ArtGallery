@@ -27,11 +27,3 @@ drawerButton.addEventListener('click', () => {
 
 
 
-// const ellipse = document.querySelector('.ellipse');
-// const click = document.querySelector('.click');
-
-// click.addEventListener('click', () => {
-//     console.log('hello')
-//     ellipse.classList.toggle('circle');
-//     ellipse.style.backgroundColor = 'red';
-// })

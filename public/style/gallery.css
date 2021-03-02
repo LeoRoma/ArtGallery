@@ -8,57 +8,70 @@
 }
 
 .gallery-inner-container{
-    /* background-color: darksalmon; */
-    /* color: transparent; */
-    /* height: 200vh; */
     padding: 0 calc(100%/12);
     position: relative;
-    /* z-index: 999; */
-    display: flex;
-    overflow-x: scroll;
     border: deepskyblue solid;
     box-sizing: border-box;
 }
 
 .second-header-container{
-    background-color: darkgray;
     top: 0;
     position: sticky;
     z-index: -1;
     width: 55%;
     line-height: 1;
+    /* border: hotpink solid; */
 }
 
 .gallery-header-container{
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: 467px;
-    border: deeppink solid;
-    /* z-index: 999; */
+    margin-top: 246px;
+    font-size: 62px;
+    max-width: 500px;
+    padding: inherit;
+    /* border: deeppink solid; */
 }
 
 .gallery-list-container{
-    border: deepskyblue solid;
-    height: 100vh;
-    /* overflow-y: auto; */
-    overflow-x: auto;
-    display: flex;
-    white-space: nowrap;
+    margin-top: 150px;
+    /* border: deepskyblue solid; */
 }
 
 .painting-container{
-    border: yellow solid;
-    width: 50%;
+    /* border: yellow solid; */
+    width: 60%;
+    /* height: 500px; */
+    /* box-sizing: content-box; */
 }
 
 .painting-image-container{
     width: 100%;
-    box-sizing: border-box;
-    border: firebrick solid;
+    /* box-sizing: border-box; */
+    /* height: 50%; */
+    border: pink solid;
 }
 
 .painting-image-container img{
     width: 100%;
+    height: 400px;
     object-fit: contain;
+}
+
+/* .painting-container:nth-child(odd){
+    position: relative;
+    left: 0;
+    border: black 0.5px;
+} */
+
+.painting-container:nth-child(even){
+    position: relative;
+    float: right;
+    border: lawngreen 0.5px;
+}
+
+.painting-title{
+    font-size: 16px;
+    text-align: center;
 }

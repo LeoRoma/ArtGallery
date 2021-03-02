@@ -89,13 +89,14 @@ function displayPaintings() {
 			<div class="painting-container">
 				<div class="painting-image-container">
 					<img src="${paintingsFromEurope[key].images.web.url}" alt="painting"></img> 
+					<div class="painting-title">
+						${paintingsFromEurope[key].title}
+					</div>
+					<div class="painting-title">
+						${paintingsFromEurope[key].culture}
+					</div>
 				</div>
-				<div>
-					${paintingsFromEurope[key].title}
-				</div>
-				<div>
-					${paintingsFromEurope[key].culture}
-				</div>
+			
 			</div>
 		
 		`
