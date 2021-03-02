@@ -4,11 +4,12 @@ const landingPageContainer = document.querySelector('.start-screen');
 let landingPageContainerHeight = landingPageContainer.offsetHeight;
 const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
+const secondHeaderContainer = document.querySelector('.second-header-container');
+let secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 
-const drawerButton = document.querySelector('.drawer-button');
-const rightSideNavInner = document.querySelector('.right-sidenav-inner');
-const rightSidenavWrapper = document.querySelector('.right-sidenav-wrapper');
-const sidenavImageContainer = document.querySelector('.sidenav-image-container');
+console.log(secondHeaderContainerHeight, " second header container");
+console.log(landingPageContainerHeight, " landing page")
+console.log(scrollTop.scrollTop, "scrolltop")
 
 window.addEventListener('scroll', () => {
     rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
@@ -16,6 +17,12 @@ window.addEventListener('scroll', () => {
     landingPageContainer.style.opacity = -scrollTop.scrollTop / (landingPageContainerHeight) + 1
 })
 
+
+//SideNavBar
+const drawerButton = document.querySelector('.drawer-button');
+const rightSideNavInner = document.querySelector('.right-sidenav-inner');
+const rightSidenavWrapper = document.querySelector('.right-sidenav-wrapper');
+const sidenavImageContainer = document.querySelector('.sidenav-image-container');
 
 drawerButton.addEventListener('click', () => {
     rightSideNavInner.classList.toggle('open-menu');

@@ -5,7 +5,6 @@ const paintingsFromEurope = {
 	Germany: "",
 	Italy: "",
 	Netherlands: "",
-	Sweden: "",
 	Switzerland: ""
 } 
 
@@ -68,32 +67,31 @@ function getEachCountryPainting(filteredArts){
 			if(country === "Netherlands"){
 				paintingsFromEurope.Netherlands = painting;
 			}
-			if(country === "Sweden"){
-				paintingsFromEurope.Sweden = painting
-			}
+			// if(country === "Sweden"){
+			// 	paintingsFromEurope.Sweden = painting
+			// }
 			if(country === "Switzerland"){
 				paintingsFromEurope.Switzerland = painting
 			}
 		}
 	
 	}
-	console.log(paintingsFromEurope)
 	displayPaintings()
 }
 
 function displayPaintings() {
 	const galleryListContainer = document.querySelector('.gallery-list-container');
-	const htmlPaintings = Object.keys(paintingsFromEurope).map(function(key, index){
-		console.log(paintingsFromEurope[key].images.web.url)
+	const htmlPaintings = Object.keys(paintingsFromEurope).map(function(key){
+		const painting = paintingsFromEurope[key];
 		return `
 			<div class="painting-container">
 				<div class="painting-image-container">
-					<img src="${paintingsFromEurope[key].images.web.url}" alt="painting"></img> 
+					<img src="${painting.images.web.url}" alt="painting"></img> 
 					<div class="painting-title">
-						${paintingsFromEurope[key].title}
+						${painting.title}
 					</div>
 					<div class="painting-title">
-						${paintingsFromEurope[key].culture}
+						${painting.culture}
 					</div>
 				</div>
 			
