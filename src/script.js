@@ -48,13 +48,13 @@ function setPaintingImageHeight(){
         if(body.offsetWidth >= 1439){
             paintingImageHeight = body.offsetWidth / 2;
         }else if(body.offsetWidth >= 1200){
-            paintingImageHeight = body.offsetWidth / 3;
+            paintingImageHeight = body.offsetWidth / 2;
         }else if(body.offsetWidth >= 1022){
             console.log("1022")
-            paintingImageHeight = body.offsetWidth / 4;
+            paintingImageHeight = body.offsetWidth / 2;
         }
         else{
-            paintingImageHeight = body.offsetWidth / 4;
+            paintingImageHeight = body.offsetWidth / 2;
         }
         console.log(body.offsetWidth)
         console.log(paintingImageHeight)

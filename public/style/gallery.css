@@ -55,12 +55,11 @@
     position: relative;
     margin-top: 150px;
     box-sizing: border-box;
-  
 }
 
 .painting-container{
     width: 60%; 
-    border: red solid;
+    /* border: red solid; */
 }
 
 .painting-image-container{
@@ -94,5 +93,9 @@
 @media only screen and (max-width: 767px){
     .gallery-container{
         padding: 0;
+    }
+
+    .gallery-list-container{
+        margin-top: 20%;
     }
 }
