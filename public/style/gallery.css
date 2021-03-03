@@ -22,10 +22,12 @@
 .second-header-container{
     top: 0;
     position: sticky;
-    max-width: 58.3%;
-    line-height: 1;
+    width: 58.3%;
+    /* max-height: 300px; */
+    line-height: 0.9;
     letter-spacing: .02em;
-    font-size: 14vw;
+    text-transform: uppercase;
+    font-size: 12vw;
     box-sizing: border-box;
     border: yellow solid;
 }
@@ -34,11 +36,12 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: 246px;
-    font-size: 6vw;
-    max-width: 380px;
+    margin-top: 15%;
+    font-size: 3vw;
+    max-width: 25%;
     padding-right: inherit;
-    border: red solid;
+    text-transform: uppercase;
+    /* border: red solid; */
 }
 
 .gallery-list-container{
@@ -50,19 +53,19 @@
 
 .painting-container{
     width: 50%;
-    border: red solid;
+    /* border: red solid; */
     /* box-sizing: content-box; */
 }
 
 .painting-image-container{
     width: 100%;
-    height: 100%;
+    /* height: 700px; */
     border: pink solid;
 }
 
 .painting-image-container img{
     width: 100%;
-    /* height: 700px; */
+    height: 50%;
     object-fit: contain;
 }
 
@@ -75,10 +78,16 @@
 .painting-container:nth-child(even){
     position: relative;
     float: right;
-    border: lawngreen 0.5px;
+    /* border: lawngreen 0.5px; */
 }
 
 .painting-title{
     font-size: 16px;
     text-align: center;
+}
+
+@media only screen and (max-width: 767px){
+    .gallery-container{
+        padding: 0;
+    }
 }

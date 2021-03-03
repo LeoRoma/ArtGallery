@@ -17,7 +17,6 @@
     width:100%;
     max-width: 2560px;
     box-sizing: border-box;
-
 }
 
 .article-list-container{
@@ -108,12 +107,9 @@
 .dynamic-col{
     position: relative;
     width: 100%;
-    border: salmon solid;
 }
 
-.articles-holder{
-    border: black solid;
-}
+
 
 .article-container{
     display: flex;
@@ -256,7 +252,7 @@ a{
  
     .article-list-container{
         flex-direction: column;
-        margin-right: 0;
+        margin-right: 5px;
     }
 
     .article-container{
@@ -287,6 +283,11 @@ a{
     
     .sticky-dynamic-container{
         padding: 14px;
+    }
+
+    .article-list-container{
+        /* flex-direction: column; */
+        /* margin-right: 0; */
     }
 
     .poster-image{

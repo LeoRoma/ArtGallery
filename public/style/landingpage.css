@@ -49,8 +49,9 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     box-sizing: border-box;
+    text-align: left;
 }
 
 .header-text{
@@ -59,6 +60,8 @@ html{
     user-select: none;
     font-size: calc(48px + (120 - 48) * (100vw - 240px)/(1920 - 240));
     line-height: 1.1;
+    text-transform: uppercase;
+    /* text-align: right; */
 }
 
 .header-image-wrapper{
