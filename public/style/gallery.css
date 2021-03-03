@@ -8,14 +8,12 @@
     margin: 0 auto;
     width: 100%;
     max-width: 2560px;
-    border: black solid;
     box-sizing: border-box;
 }
 
 .gallery-inner-container{
     padding: 0 calc(100%/16);
     position: relative;
-    border: red solid;
     box-sizing: border-box;
 }
 
@@ -29,7 +27,6 @@
     text-transform: uppercase;
     font-size: 12vw;
     box-sizing: border-box;
-    border: yellow solid;
 }
 
 .second-header-container::before{
@@ -62,20 +59,18 @@
 }
 
 .painting-container{
-    width: 50%;
-    /* border: red solid; */
-    /* box-sizing: content-box; */
+    width: 60%; 
+    
 }
 
 .painting-image-container{
     width: 100%;
-    /* height: 700px; */
-    border: pink solid;
+    
 }
 
 .painting-image-container img{
     width: 100%;
-    height: 50%;
+    height: 600px;
     object-fit: contain;
 }
 
@@ -88,7 +83,7 @@
 .painting-container:nth-child(even){
     position: relative;
     float: right;
-    /* border: lawngreen 0.5px; */
+   
 }
 
 .painting-title{

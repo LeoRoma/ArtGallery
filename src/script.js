@@ -14,21 +14,38 @@ let secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 // Latest News
 let articlesHolderHeight;
 
+// Gallery 
+
+
+
 // Resize
 
 window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
+   
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
         setCurrentHeight()
+        setPaintingImageHeight()
     })
+
+  
 };
 
 function setCurrentHeight() {
     landingPageContainerHeight = landingPageContainer.offsetHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
+}
+
+function setPaintingImageHeight(){
+    // console.log(body.offsetWidth)
+    if(body.offsetWidth <= 1439){
+        console.log(body.offsetWidth / 2)
+        paintingImageContainerImageHeight = body.offsetWidth / 10;
+    }//else if(window.offsetWidth >= 1200)
+    paintingImageContainerImage.style.height = `${paintingImageContainerImageHeight}px`;
 }
 
 // Scroll
@@ -54,7 +71,7 @@ function fadeOutLandingPageContainer(){
 
 function fadeSecondHeaderOpacity() {
     let sumOfHeights = articlesHolderHeight + landingPageContainerHeight + secondHeaderContainerHeight
-    secondHeaderContainer.style.opacity = scrollTop.scrollTop >= sumOfHeights? "0.1" : "1";
+    secondHeaderContainer.style.opacity = scrollTop.scrollTop >= sumOfHeights? "0.03" : "1";
 }
 
 
