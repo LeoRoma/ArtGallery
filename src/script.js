@@ -1,5 +1,7 @@
 const body = document.body;
 let scrollTop = document.documentElement;
+
+// Landing Page
 const landingPageContainer = document.querySelector('.start-screen');
 let landingPageContainerHeight = landingPageContainer.offsetHeight;
 
@@ -9,20 +11,22 @@ let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
 const secondHeaderContainer = document.querySelector('.second-header-container');
 let secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 
+// Latest News
 let articlesHolderHeight;
 
-window.onload = function() {
-    const articlesHolder = document.querySelector('.articles-holder');
+// Resize
+
+window.onload = function () {
+    const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
-    // console.log(stickyDynamicContainerHeight)
+
+    window.addEventListener('resize', () => {
+        articlesHolderHeight = articlesHolder.offsetHeight;
+        setCurrentHeight()
+    })
 };
 
-// Resize
-window.addEventListener('resize', () => {
-    setCurrentHeight()
-})
-
-function setCurrentHeight(){
+function setCurrentHeight() {
     landingPageContainerHeight = landingPageContainer.offsetHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
@@ -30,21 +34,27 @@ function setCurrentHeight(){
 // Scroll
 
 window.addEventListener('scroll', () => {
-    rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
-    drawerButton.style.right = scrollTop.scrollTop >= 1 ? '15px' : `-150px`;
-    landingPageContainer.style.opacity = -scrollTop.scrollTop / (landingPageContainerHeight) + 1;
+    hideShowSidenavHeader()
+    hideShowDrawerButton()
+    fadeOutLandingPageContainer()
     fadeSecondHeaderOpacity()
-    // console.log(-scrollTop.scrollTop)
 })
 
-function fadeSecondHeaderOpacity(){
-    if(scrollTop.scrollTop >= (articlesHolderHeight + landingPageContainerHeight)){
-        // console.log(-scrollTop.scrollTop / (secondHeaderContainerHeight) + 0.5, " second header")
-        secondHeaderContainer.style.opacity = -scrollTop.scrollTop / (secondHeaderContainerHeight) + 10
-    }
-    if(scrollTop.scrollTop >= (articlesHolderHeight + landingPageContainerHeight + secondHeaderContainerHeight)){
-        secondHeaderContainer.style.opacity = 0.5
-    }
+function hideShowSidenavHeader(){
+    rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
+}
+
+function hideShowDrawerButton(){
+    drawerButton.style.right = scrollTop.scrollTop >= 1 ? '15px' : `-150px`;
+}
+
+function fadeOutLandingPageContainer(){
+    landingPageContainer.style.opacity = (-scrollTop.scrollTop / landingPageContainerHeight) + 1;
+}
+
+function fadeSecondHeaderOpacity() {
+    let sumOfHeights = articlesHolderHeight + landingPageContainerHeight + secondHeaderContainerHeight
+    secondHeaderContainer.style.opacity = scrollTop.scrollTop >= sumOfHeights? "0.1" : "1";
 }
 
 
@@ -58,7 +68,7 @@ drawerButton.addEventListener('click', () => {
     rightSideNavInner.classList.toggle('open-menu');
     sidenavImageContainer.classList.toggle('open-image')
     drawerButton.classList.toggle('change');
-    rightSidenavWrapper.classList.toggle('circle'); 
+    rightSidenavWrapper.classList.toggle('circle');
     sidenavImageContainer.classList.toggle('circle')
 })
 
