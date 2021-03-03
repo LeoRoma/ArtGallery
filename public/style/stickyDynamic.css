@@ -108,10 +108,11 @@
 .dynamic-col{
     position: relative;
     width: 100%;
+    border: salmon solid;
 }
 
 .articles-holder{
-    
+    border: black solid;
 }
 
 .article-container{
