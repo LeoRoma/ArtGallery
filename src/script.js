@@ -16,7 +16,9 @@ let articlesHolderHeight;
 
 // Gallery 
 
+const paintingImage = document.querySelector('.gallery-list-container').querySelectorAll('.painting-image-container img');
 
+let paintingImageHeight = paintingImage.offsetHeight;
 
 // Resize
 
@@ -24,14 +26,14 @@ window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
-   
+    
+
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
         setCurrentHeight()
         setPaintingImageHeight()
-    })
-
-  
+    })  
+    setPaintingImageHeight()
 };
 
 function setCurrentHeight() {
@@ -40,13 +42,29 @@ function setCurrentHeight() {
 }
 
 function setPaintingImageHeight(){
-    // console.log(body.offsetWidth)
-    if(body.offsetWidth <= 1439){
-        console.log(body.offsetWidth / 2)
-        paintingImageContainerImageHeight = body.offsetWidth / 10;
-    }//else if(window.offsetWidth >= 1200)
-    paintingImageContainerImage.style.height = `${paintingImageContainerImageHeight}px`;
+    for(let i = 0; i < paintingImage.length; i++){
+        const painting = paintingImage[i]
+        let paintingImageHeight = painting.offsetHeight;
+        if(body.offsetWidth >= 1439){
+            paintingImageHeight = body.offsetWidth / 2;
+        }else if(body.offsetWidth >= 1200){
+            paintingImageHeight = body.offsetWidth / 3;
+        }else if(body.offsetWidth >= 1022){
+            console.log("1022")
+            paintingImageHeight = body.offsetWidth / 4;
+        }
+        else{
+            paintingImageHeight = body.offsetWidth / 4;
+        }
+        console.log(body.offsetWidth)
+        console.log(paintingImageHeight)
+        painting.style.height = `${paintingImageHeight}px`;
+    }
+  
+    // paintingImageContainerImage.style.height = `${paintingImageContainerImageHeight}px`;
 }
+
+setPaintingImageHeight()
 
 // Scroll
 

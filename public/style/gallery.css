@@ -60,17 +60,17 @@
 
 .painting-container{
     width: 60%; 
-    
+    border: red solid;
 }
 
 .painting-image-container{
     width: 100%;
-    
+    height: 100%;
 }
 
 .painting-image-container img{
     width: 100%;
-    height: 600px;
+    height: 700px;
     object-fit: contain;
 }
 
