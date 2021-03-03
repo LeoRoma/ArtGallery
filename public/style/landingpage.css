@@ -49,9 +49,9 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     box-sizing: border-box;
-    text-align: left;
+
 }
 
 .header-text{
@@ -139,7 +139,6 @@ html{
 
     .right-sidenav-header{
         width: calc(100%/8 * 2);
-        justify-content: flex-start;
         margin-top: 96px;
     }
 }

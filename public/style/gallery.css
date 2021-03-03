@@ -32,6 +32,16 @@
     border: yellow solid;
 }
 
+.second-header-container::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    height: 1vw;
+    background: #000;
+    width: 20%;
+}
+
 .gallery-header-container{
     position: absolute;
     right: 0;
