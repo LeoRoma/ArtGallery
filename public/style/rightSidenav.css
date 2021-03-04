@@ -8,7 +8,7 @@
     background-color:transparent;
     overflow-x: hidden;
     padding-top: 20px;
-    border: black solid;
+    /* border: black solid; */
     display: flex;
     flex-direction: column;
     display: block;
@@ -32,7 +32,7 @@
 }
 
 .image-splash{
-    left: 45%;
+    left: 40%;
 }
 
 .sidenav-image-container img{
@@ -45,8 +45,12 @@
     overflow:visible;
 }
 
+
+/* side nav items */
+
+
 .right-sidenav-wrapper{
-    border:violet solid;
+    /* border:violet solid; */
     position: fixed;
     clip-path: circle(5%);
     transition: clip-path 0.5s;
@@ -71,16 +75,21 @@
     overflow: visible;
 }
 
+.side-navbar-item{
+    color: black;
+}
+
 .right-sidenav-inner a{
     position: relative;
     top: 40%;
+    color:white;
 }
 
 .drawer-button{
     margin: auto;
     position: fixed;
     text-align: right;
-    border:black solid;
+    /* border:black solid; */
     top: 50%;
     right: -70px;
     transition: 1s;
@@ -117,10 +126,11 @@
 .navbar-image{
     position: relative;
     width: 100%;
-    top: 0;
+    /* top: 0; */
     left: 0;
      z-index: 1;
     visibility: hidden;
+    z-index: -1;
 }
 
 .navbar-item{
@@ -153,9 +163,24 @@
      visibility: visible;
  }
 
+
+ @media only screen and (max-width: 1439px){
+    .image-splash{
+        left: 30%;
+    }
+ }
+
+
 @media only screen and (max-width: 1200px){
+    .image-splash{
+        left: 35%;
+    }
     .open-image{
         width: 100%;
+    }
+
+    .open-menu {
+        width: 40%;
     }
 }
 

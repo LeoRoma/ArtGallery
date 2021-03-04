@@ -97,15 +97,23 @@ html{
     top:0;
     transition: 1s;
 }
+
+.side-navbar-item{
+    color: black;
+}
   
-  .right-sidenav-header a {
+.right-sidenav-header a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: black;
     display: block;
-  }
+}
 
+.right-sidenav-header a:hover{
+    color: gray;
+    font-size: 30px;
+}
 
 @media  (min-width: 768px) and (max-width: 1022px){
     .landing-page-wrapper{

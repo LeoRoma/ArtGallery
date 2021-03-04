@@ -107,12 +107,10 @@ for(let i = 0; i < navbarItems.length; i++){
 
 	navbarItems[i].addEventListener('mouseover', (event) => {
 		console.log('hello')
-		event.target.style.color = 'red'
 		navbarImages[i].classList.add('show')
 	})
 	navbarItems[i].addEventListener('mouseout', (event) => {
 		console.log('hello')
-		event.target.style.color = 'white'
 		navbarImages[i].classList.remove('show')
 	})
 }
