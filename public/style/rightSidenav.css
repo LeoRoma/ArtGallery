@@ -75,9 +75,6 @@
     overflow: visible;
 }
 
-.side-navbar-item{
-    color: black;
-}
 
 .right-sidenav-inner a{
     position: relative;
@@ -186,35 +183,27 @@
 
 
 @media (max-width: 769px){
-    .right-sidenav-container{
+    /* .right-sidenav-container{
+        display: block;
+    } */
+   
+    .drawer-button{
+        top: 90%;
+    }
+
+    .right-sidenav-inner a{
+       font-size: 7vw;
+    }
+    
+
+    .open-menu {
+        width: 50%;
+    }
+
+    .open-image{
         display: none;
     }
-   
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hide{
-    visibility: hidden;
-}
-
-.show{
-    visibility: visible;
-}
-/* .hover-title:hover + .hover-image {
-    visibility: visible;
-    pointer-events: none;
-} */
 

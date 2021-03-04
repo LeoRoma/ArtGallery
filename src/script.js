@@ -92,11 +92,12 @@ drawerButton.addEventListener('click', () => {
     sidenavImageContainer.classList.toggle('open-image')
     drawerButton.classList.toggle('change');
     rightSidenavWrapper.classList.toggle('circle');
-    // sidenavImageContainer.classList.toggle('circle')
     body.classList.toggle('block-scroll')
 })
 
 
+
+// SideNavbar image
 
 const navbarImages = document.querySelectorAll('.navbar-image');
 const navbarItems = document.querySelectorAll('.navbar-item');
@@ -106,11 +107,9 @@ for(let i = 0; i < navbarItems.length; i++){
     navbarImage = navbarImages[i];
 
 	navbarItems[i].addEventListener('mouseover', (event) => {
-		console.log('hello')
-		navbarImages[i].classList.add('show')
+		navbarImages[i].classList.add('show-image-onhover')
 	})
 	navbarItems[i].addEventListener('mouseout', (event) => {
-		console.log('hello')
-		navbarImages[i].classList.remove('show')
+		navbarImages[i].classList.remove('show-image-onhover')
 	})
 }
