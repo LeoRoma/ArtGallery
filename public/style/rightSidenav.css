@@ -27,14 +27,19 @@
     top: 0;
     right: 0;
     transition: 0.5s;
-    clip-path: circle(5%);
+    width: 0;
+    /* clip-path: circle(5%); */
+}
+
+.image-splash{
+    left: 45%;
 }
 
 .sidenav-image-container img{
     object-fit: contain;
     position: absolute;
     margin: 0;
-    right: 3%;
+    /* left: 45%; */
     max-height: 100%; 
     max-width: 100vh; 
     overflow:visible;
@@ -103,19 +108,32 @@
     background-color: white;
 }
 
+.look{
+    border: red solid;
+    position: absolute;
+    left: 0;
+}
 
-
-.image-nav{
+.navbar-image{
     position: relative;
-    border: green solid;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+     z-index: 1;
+    visibility: hidden;
+}
+
+.navbar-item{
+    color: white;
+    font-size: 54px;
+}
+
+.navbar-item:hover{
+    color: grey;
 }
 
 .open-menu {
-    width: 40%;
+    width: 30%;
 }
 
 .open-image{
@@ -129,6 +147,10 @@
 .block-scroll {
     height: 100%;
     overflow-y: hidden;
+ }
+
+ .show-image-onhover{
+     visibility: visible;
  }
 
 @media only screen and (max-width: 1200px){

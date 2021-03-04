@@ -67,7 +67,7 @@ function hideShowSidenavHeader(){
 }
 
 function hideShowDrawerButton(){
-    drawerButton.style.right = (scrollTop.scrollTop >= 1 || body.sumOfHeight >= landingPageContainerHeight) ? '15px' : `-150px`;
+    drawerButton.style.right = (scrollTop.scrollTop >= 1 || body.offSetHeight >= landingPageContainerHeight) ? '15px' : `-150px`;
     
 }
 
@@ -92,29 +92,27 @@ drawerButton.addEventListener('click', () => {
     sidenavImageContainer.classList.toggle('open-image')
     drawerButton.classList.toggle('change');
     rightSidenavWrapper.classList.toggle('circle');
-    sidenavImageContainer.classList.toggle('circle')
+    // sidenavImageContainer.classList.toggle('circle')
     body.classList.toggle('block-scroll')
 })
 
 
 
+const navbarImages = document.querySelectorAll('.navbar-image');
+const navbarItems = document.querySelectorAll('.navbar-item');
 
+for(let i = 0; i < navbarItems.length; i++){
+    navbarItem = navbarItems[i];
+    navbarImage = navbarImages[i];
 
-// const hoverTitle = document.querySelectorAll('.hover-title');
-// const hoverImage = document.querySelectorAll('.hover-image');
-
-
-// for(let i = 0; i < hoverTitle.length; i++){
-// 	hoverTitle[i].addEventListener('mouseover', (event) => {
-// 		// console.log(this)
-// 		console.log('hello')
-// 		event.target.style.color = 'red'
-// 		hoverImage[i].classList.add('show')
-// 	})
-// 	hoverTitle[i].addEventListener('mouseout', (event) => {
-// 		// console.log(this)
-// 		console.log('hello')
-// 		event.target.style.color = 'red'
-// 		hoverImage[i].classList.remove('show')
-// 	})
-// }
+	navbarItems[i].addEventListener('mouseover', (event) => {
+		console.log('hello')
+		event.target.style.color = 'red'
+		navbarImages[i].classList.add('show')
+	})
+	navbarItems[i].addEventListener('mouseout', (event) => {
+		console.log('hello')
+		event.target.style.color = 'white'
+		navbarImages[i].classList.remove('show')
+	})
+}
