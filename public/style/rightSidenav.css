@@ -114,6 +114,11 @@
     clip-path: circle(100% at 70% 20%);
 }
 
+.block-scroll {
+    height: 100%;
+    overflow-y: hidden;
+ }
+
 
 @media (max-width: 769px){
     .right-sidenav-container{

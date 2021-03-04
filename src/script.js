@@ -26,8 +26,6 @@ window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
-    
-
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
         setCurrentHeight()
@@ -45,26 +43,16 @@ function setPaintingImageHeight(){
     for(let i = 0; i < paintingImage.length; i++){
         const painting = paintingImage[i]
         let paintingImageHeight = painting.offsetHeight;
-        if(body.offsetWidth >= 1439){
-            paintingImageHeight = body.offsetWidth / 2;
-        }else if(body.offsetWidth >= 1200){
-            paintingImageHeight = body.offsetWidth / 2;
-        }else if(body.offsetWidth >= 1022){
-            console.log("1022")
-            paintingImageHeight = body.offsetWidth / 2;
-        }
-        else{
+        if(body.offsetWidth <= 2560){
             paintingImageHeight = body.offsetWidth / 2;
         }
         console.log(body.offsetWidth)
         console.log(paintingImageHeight)
         painting.style.height = `${paintingImageHeight}px`;
     }
-  
-    // paintingImageContainerImage.style.height = `${paintingImageContainerImageHeight}px`;
 }
 
-setPaintingImageHeight()
+
 
 // Scroll
 
@@ -80,7 +68,8 @@ function hideShowSidenavHeader(){
 }
 
 function hideShowDrawerButton(){
-    drawerButton.style.right = scrollTop.scrollTop >= 1 ? '15px' : `-150px`;
+    drawerButton.style.right = (scrollTop.scrollTop >= 1 || body.sumOfHeight >= landingPageContainerHeight) ? '15px' : `-150px`;
+    
 }
 
 function fadeOutLandingPageContainer(){
@@ -105,6 +94,7 @@ drawerButton.addEventListener('click', () => {
     drawerButton.classList.toggle('change');
     rightSidenavWrapper.classList.toggle('circle');
     sidenavImageContainer.classList.toggle('circle')
+    body.classList.toggle('block-scroll')
 })
 
 
