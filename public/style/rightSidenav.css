@@ -5,7 +5,7 @@
     height: 100%;
     width: 70px;
     z-index: 1;
-    background-color: transparent;
+    background-color:transparent;
     overflow-x: hidden;
     padding-top: 20px;
     border: black solid;
@@ -32,8 +32,9 @@
 
 .sidenav-image-container img{
     object-fit: contain;
-    position: relative;
+    position: absolute;
     margin: 0;
+    right: 3%;
     max-height: 100%; 
     max-width: 100vh; 
     overflow:visible;
@@ -102,22 +103,39 @@
     background-color: white;
 }
 
+
+
+.image-nav{
+    position: relative;
+    border: green solid;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .open-menu {
-    width: 50%;
+    width: 40%;
 }
 
 .open-image{
-    width: 820px;
+    width: 70%;
 }
 
 .circle{
-    clip-path: circle(100% at 70% 20%);
+    clip-path: circle(70% at 50% 47%);
 }
 
 .block-scroll {
     height: 100%;
     overflow-y: hidden;
  }
+
+@media only screen and (max-width: 1200px){
+    .open-image{
+        width: 100%;
+    }
+}
 
 
 @media (max-width: 769px){
@@ -127,8 +145,29 @@
    
 }
 
-@media only screen and (max-width: 1200px){
-    .open-image{
-        width: 750px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hide{
+    visibility: hidden;
 }
+
+.show{
+    visibility: visible;
+}
+/* .hover-title:hover + .hover-image {
+    visibility: visible;
+    pointer-events: none;
+} */
+

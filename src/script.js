@@ -46,8 +46,7 @@ function setPaintingImageHeight(){
         if(body.offsetWidth <= 2560){
             paintingImageHeight = body.offsetWidth / 2;
         }
-        console.log(body.offsetWidth)
-        console.log(paintingImageHeight)
+
         painting.style.height = `${paintingImageHeight}px`;
     }
 }
@@ -99,3 +98,23 @@ drawerButton.addEventListener('click', () => {
 
 
 
+
+
+// const hoverTitle = document.querySelectorAll('.hover-title');
+// const hoverImage = document.querySelectorAll('.hover-image');
+
+
+// for(let i = 0; i < hoverTitle.length; i++){
+// 	hoverTitle[i].addEventListener('mouseover', (event) => {
+// 		// console.log(this)
+// 		console.log('hello')
+// 		event.target.style.color = 'red'
+// 		hoverImage[i].classList.add('show')
+// 	})
+// 	hoverTitle[i].addEventListener('mouseout', (event) => {
+// 		// console.log(this)
+// 		console.log('hello')
+// 		event.target.style.color = 'red'
+// 		hoverImage[i].classList.remove('show')
+// 	})
+// }

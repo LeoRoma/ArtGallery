@@ -7,3 +7,7 @@ const paintingsData = [
 	{artist: "Vincent van Gogh (Dutch, 1853-1890)", culture: "Netherlands, 19th century", image: "https://openaccess-cdn.clevelandart.org/1958.32/1958.32_web.jpg", title: "Two Poplars in the Alpilles near Saint-Rémy"},
 	{artist: "Arnold Böcklin (Swiss, 1827-1901)", culture: "Switzerland, 19th century", image: "https://openaccess-cdn.clevelandart.org/1979.57/1979.57_web.jpg", title: "Ruin by the Sea"}
 ]
+
+
+
+
