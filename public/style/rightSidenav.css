@@ -127,6 +127,7 @@
     left: 0;
      z-index: 1;
     visibility: hidden;
+    /* transition: 0.5s; */
     z-index: -1;
 }
 
