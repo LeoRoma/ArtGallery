@@ -9,7 +9,7 @@ const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
 
 const secondHeaderContainer = document.querySelector('.second-header-container');
-let secondHeaderContainerHeight;
+let secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 
 // Latest News
 let articlesHolderHeight;
@@ -26,22 +26,20 @@ window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
-    
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
-        setCurrentHeight();
+        setCurrentHeight()
         setPaintingImageHeight();
     })  
+    setCurrentHeight();
     setPaintingImageHeight();
+  
 };
 
 function setCurrentHeight() {
-    console.log("hi")
-    landingPageContainerHeight = landingPageContainer.clientHeight;
+    landingPageContainerHeight = landingPageContainer.offsetHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
-setCurrentHeight();
-
 
 function setPaintingImageHeight(){
     for(let i = 0; i < paintingImage.length; i++){
@@ -98,3 +96,4 @@ drawerButton.addEventListener('click', () => {
     rightSidenavWrapper.classList.toggle('circle');
     body.classList.toggle('block-scroll')
 })
+
