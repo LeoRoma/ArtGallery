@@ -9,7 +9,7 @@ const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
 
 const secondHeaderContainer = document.querySelector('.second-header-container');
-let secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
+let secondHeaderContainerHeight;
 
 // Latest News
 let articlesHolderHeight;
@@ -37,7 +37,7 @@ window.onload = function () {
 
 function setCurrentHeight() {
     console.log("hi")
-    landingPageContainerHeight = landingPageContainer.offsetHeight;
+    landingPageContainerHeight = landingPageContainer.clientHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
 setCurrentHeight();
