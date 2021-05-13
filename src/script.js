@@ -32,6 +32,7 @@ window.onload = function () {
         setPaintingImageHeight()
     })  
     setPaintingImageHeight()
+    setCurrentHeight()
 };
 
 function setCurrentHeight() {
@@ -94,22 +95,3 @@ drawerButton.addEventListener('click', () => {
     rightSidenavWrapper.classList.toggle('circle');
     body.classList.toggle('block-scroll')
 })
-
-
-
-// SideNavbar image
-
-// const navbarImages = document.querySelectorAll('.navbar-image');
-// const navbarItems = document.querySelectorAll('.navbar-item');
-
-// for(let i = 0; i < navbarItems.length; i++){
-//     navbarItem = navbarItems[i];
-//     navbarImage = navbarImages[i];
-
-// 	navbarItems[i].addEventListener('mouseover', (event) => {
-// 		navbarImages[i].classList.add('show-image-onhover')
-// 	})
-// 	navbarItems[i].addEventListener('mouseout', (event) => {
-// 		navbarImages[i].classList.remove('show-image-onhover')
-// 	})
-// }
