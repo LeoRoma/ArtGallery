@@ -26,14 +26,13 @@ window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
-    setCurrentHeight()
+    
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
-        setCurrentHeight()
-        setPaintingImageHeight()
+        setCurrentHeight();
+        setPaintingImageHeight();
     })  
-    setPaintingImageHeight()
-    
+    setPaintingImageHeight();
 };
 
 function setCurrentHeight() {
@@ -41,6 +40,8 @@ function setCurrentHeight() {
     landingPageContainerHeight = landingPageContainer.offsetHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
+setCurrentHeight();
+
 
 function setPaintingImageHeight(){
     for(let i = 0; i < paintingImage.length; i++){
