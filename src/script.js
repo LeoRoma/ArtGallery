@@ -99,17 +99,17 @@ drawerButton.addEventListener('click', () => {
 
 // SideNavbar image
 
-const navbarImages = document.querySelectorAll('.navbar-image');
-const navbarItems = document.querySelectorAll('.navbar-item');
+// const navbarImages = document.querySelectorAll('.navbar-image');
+// const navbarItems = document.querySelectorAll('.navbar-item');
 
-for(let i = 0; i < navbarItems.length; i++){
-    navbarItem = navbarItems[i];
-    navbarImage = navbarImages[i];
+// for(let i = 0; i < navbarItems.length; i++){
+//     navbarItem = navbarItems[i];
+//     navbarImage = navbarImages[i];
 
-	navbarItems[i].addEventListener('mouseover', (event) => {
-		navbarImages[i].classList.add('show-image-onhover')
-	})
-	navbarItems[i].addEventListener('mouseout', (event) => {
-		navbarImages[i].classList.remove('show-image-onhover')
-	})
-}
+// 	navbarItems[i].addEventListener('mouseover', (event) => {
+// 		navbarImages[i].classList.add('show-image-onhover')
+// 	})
+// 	navbarItems[i].addEventListener('mouseout', (event) => {
+// 		navbarImages[i].classList.remove('show-image-onhover')
+// 	})
+// }
