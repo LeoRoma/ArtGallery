@@ -26,16 +26,18 @@ window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
     articlesHolderHeight = articlesHolder.offsetHeight;
 
+    setCurrentHeight()
     window.addEventListener('resize', () => {
         articlesHolderHeight = articlesHolder.offsetHeight;
         setCurrentHeight()
         setPaintingImageHeight()
     })  
     setPaintingImageHeight()
-    setCurrentHeight()
+    
 };
 
 function setCurrentHeight() {
+    console.log("hi")
     landingPageContainerHeight = landingPageContainer.offsetHeight;
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
