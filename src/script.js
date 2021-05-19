@@ -3,7 +3,7 @@ let scrollTop = document.documentElement;
 
 // Landing Page
 const landingPageContainer = document.querySelector('.start-screen');
-let landingPageContainerHeight = landingPageContainer.offsetHeight;
+let landingPageContainerHeight = landingPageContainer.clientHeight;
 
 const rightSidenavHeader = document.querySelector('.right-sidenav-header');
 let rightSidenavHeaderWidth = rightSidenavHeader.offsetWidth;
@@ -24,16 +24,17 @@ let paintingImageHeight = paintingImage.offsetHeight;
 
 window.onload = function () {
     const articlesHolder = document.querySelector('.sticky-dynamic-container');
-    articlesHolderHeight = articlesHolder.offsetHeight;
-
-    window.addEventListener('resize', () => {
+    setTimeout(function () {
         articlesHolderHeight = articlesHolder.offsetHeight;
-        setCurrentHeight()
+    },500)
+    
+    window.addEventListener('resize', () => {
+
+        setCurrentHeight();
         setPaintingImageHeight();
-    })  
-  
+    })
+
     setPaintingImageHeight();
-  
 };
 
 function setCurrentHeight() {
@@ -41,19 +42,17 @@ function setCurrentHeight() {
     secondHeaderContainerHeight = secondHeaderContainer.offsetHeight;
 }
 
-function setPaintingImageHeight(){
-    for(let i = 0; i < paintingImage.length; i++){
+function setPaintingImageHeight() {
+    for (let i = 0; i < paintingImage.length; i++) {
         const painting = paintingImage[i]
         let paintingImageHeight = painting.offsetHeight;
-        if(body.offsetWidth <= 2560){
+        if (body.offsetWidth <= 2560) {
             paintingImageHeight = body.offsetWidth / 2;
         }
 
         painting.style.height = `${paintingImageHeight}px`;
     }
 }
-
-
 
 // Scroll
 
@@ -64,22 +63,22 @@ window.addEventListener('scroll', () => {
     fadeSecondHeaderOpacity();
 })
 
-function hideShowSidenavHeader(){
+function hideShowSidenavHeader() {
     rightSidenavHeader.style.right = scrollTop.scrollTop >= 1 ? `-${rightSidenavHeaderWidth}px` : '0px';
 }
 
-function hideShowDrawerButton(){
+function hideShowDrawerButton() {
     drawerButton.style.right = (scrollTop.scrollTop >= 1 || body.offSetHeight >= landingPageContainerHeight) ? '15px' : `-150px`;
-    
+
 }
 
-function fadeOutLandingPageContainer(){
+function fadeOutLandingPageContainer() {
     landingPageContainer.style.opacity = (-scrollTop.scrollTop / landingPageContainerHeight) + 1;
 }
 
 function fadeSecondHeaderOpacity() {
-    let sumOfHeights = articlesHolderHeight + landingPageContainerHeight + secondHeaderContainerHeight
-    secondHeaderContainer.style.opacity = scrollTop.scrollTop >= sumOfHeights? "0.03" : "1";
+    let sumOfHeights = articlesHolderHeight + landingPageContainerHeight + secondHeaderContainerHeight;
+    secondHeaderContainer.style.opacity = scrollTop.scrollTop >= sumOfHeights ? "0.03" : "1";
 }
 
 
