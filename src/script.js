@@ -31,7 +31,7 @@ window.onload = function () {
         setCurrentHeight()
         setPaintingImageHeight();
     })  
-    setCurrentHeight();
+  
     setPaintingImageHeight();
   
 };
@@ -58,10 +58,10 @@ function setPaintingImageHeight(){
 // Scroll
 
 window.addEventListener('scroll', () => {
-    hideShowSidenavHeader()
-    hideShowDrawerButton()
-    fadeOutLandingPageContainer()
-    fadeSecondHeaderOpacity()
+    hideShowSidenavHeader();
+    hideShowDrawerButton();
+    fadeOutLandingPageContainer();
+    fadeSecondHeaderOpacity();
 })
 
 function hideShowSidenavHeader(){

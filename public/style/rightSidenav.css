@@ -182,25 +182,20 @@
 
 
 @media (max-width: 769px){
-    /* .right-sidenav-container{
-        display: block;
-    } */
-   
-    .drawer-button{
-        top: 90%;
-    }
 
     .right-sidenav-inner a{
        font-size: 7vw;
     }
     
-
+    .image-splash{
+        left: -20%;
+    }
     .open-menu {
-        width: 50%;
+        width: 65%;
     }
 
     .open-image{
-        display: none;
+        display: block;
     }
 }
 
