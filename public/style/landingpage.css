@@ -83,6 +83,18 @@ html{
     object-position: 0% 50%;
 }
 
+.look-down-container{
+    position:absolute;
+    top: 85%;
+    left: 38%;
+    font-weight: 900;
+}
+
+.look-down-container .right{
+    position: absolute;
+    left: 20%;
+    /* color: red; */
+}
 
 .right-sidenav-header {
     position: relative;
@@ -151,6 +163,10 @@ html{
         width: calc(100%/8 * 2);
         margin-top: 96px;
     }
+
+    .look-down-container{
+        left: 60%;
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -193,5 +209,10 @@ html{
 
     .right-sidenav-header{
         display: none;
+    }
+
+    .look-down-container{
+        top: 95%;
+        left: 50%;
     }
 }
