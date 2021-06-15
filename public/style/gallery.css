@@ -21,7 +21,6 @@
     top: 0;
     position: sticky;
     width: 58.3%;
-    /* max-height: 300px; */
     line-height: 0.9;
     letter-spacing: .02em;
     text-transform: uppercase;
@@ -48,7 +47,6 @@
     max-width: 25%;
     padding-right: inherit;
     text-transform: uppercase;
-    /* border: red solid; */
 }
 
 .gallery-list-container{
@@ -59,7 +57,6 @@
 
 .painting-container{
     width: 60%; 
-    /* border: red solid; */
 }
 
 .painting-image-container{
@@ -72,12 +69,6 @@
     height: 700px;
     object-fit: contain;
 }
-
-/* .painting-container:nth-child(odd){
-    position: relative;
-    left: 0;
-    border: black 0.5px;
-} */
 
 .painting-container:nth-child(even){
     position: relative;
